@@ -1,0 +1,18 @@
+DEBUG	2021-09-10 18:54:33,845	0	org.project.App	[main]	Starting Main Method...
+ERROR	2021-09-11 16:08:53,717	0	org.project.dataaccess.FileConnection	[main]	File Not Found For ..\file/users.csv
+ERROR	2021-09-11 17:08:26,725	0	org.project.beans.User	[main]	User Parameters String is Null: null
+DEBUG	2021-09-11 17:10:33,596	0	org.project.dataaccess.FileConnection	[main]	[Ljava.lang.String;@1e81f4dc
+DEBUG	2021-09-11 17:10:33,597	1	org.project.dataaccess.FileConnection	[main]	[Ljava.lang.String;@4d591d15
+ERROR	2021-09-11 17:10:33,597	1	org.project.beans.User	[main]	User Parameters String is Null: null
+DEBUG	2021-09-11 17:10:42,180	0	org.project.dataaccess.FileConnection	[main]	[Ljava.lang.String;@5680a178
+DEBUG	2021-09-11 17:10:42,180	0	org.project.dataaccess.FileConnection	[main]	[Ljava.lang.String;@5fdef03a
+ERROR	2021-09-11 17:10:42,181	1	org.project.beans.User	[main]	User Parameters String is Null: null
+DEBUG	2021-09-11 17:10:59,476	0	org.project.dataaccess.FileConnection	[main]	1,dedwards,Valley$Shore24,Debrah,Edwards,1
+DEBUG	2021-09-11 17:10:59,477	1	org.project.dataaccess.FileConnection	[main]	2,martian.cully,Apples4Georgia!,Martian,Cully,1
+ERROR	2021-09-11 17:10:59,477	1	org.project.beans.User	[main]	User Parameters String is Null: null
+ERROR	2021-09-11 17:12:23,749	0	org.project.beans.User	[main]	User Parameters String is Null: null
+ERROR	2021-09-11 17:15:55,149	0	org.project.beans.User	[main]	User Parameters String is Null: null
+ERROR	2021-09-11 17:16:04,781	0	org.project.beans.User	[main]	User Parameters String is Null: null
+ERROR	2021-09-11 17:18:18,435	0	org.project.beans.User	[main]	User Parameters String is Null: null
+ERROR	2021-09-11 17:18:25,415	0	org.project.beans.User	[main]	User Parameters String is Null: null
+ERROR	2021-09-11 17:19:45,815	0	org.project.beans.User	[main]	User Parameters String is Null: null
