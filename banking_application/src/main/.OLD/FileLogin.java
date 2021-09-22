@@ -11,13 +11,13 @@ public class FileLogin {
 
         // Try to connect to database
         try {
-            AccessCredentialsObject.connectToDatabase(FileConnection.getInstance());
+            AccessCredentialsObject.connectToDatabase(FileBankConnection.getInstance());
         } catch (AccessCredentialsObject.AccessError e) {
             e.printStackTrace();
         }
 
         // Get access level from account
-        AccessCredentialsObject access = FileConnection.getInstance().login(username, password);
+        AccessCredentialsObject access = FileBankConnection.getInstance().login(username, password);
 
         // If login fails, disconnect from the database
         if(access==null){

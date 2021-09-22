@@ -77,6 +77,9 @@ public class EmployeeAccessCredentials extends AccessCredentialsObject {
     }
 
     @Override
+    public double getAccountBalance(Account account){return super.getAccountBalance(account);}
+
+    @Override
     public Activity getActivityById(int id) {
         return super.getActivityById(id);
     }
@@ -94,6 +97,11 @@ public class EmployeeAccessCredentials extends AccessCredentialsObject {
     @Override
     public boolean insertNewActivity(Activity activity) {
         return super.insertNewActivity(activity);
+    }
+
+    @Override
+    public void approveCredit(Credit credit, boolean approve){
+        super.approveCredit(credit, approve);
     }
 
     @Override

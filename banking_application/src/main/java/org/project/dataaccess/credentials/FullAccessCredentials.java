@@ -13,7 +13,7 @@ public class FullAccessCredentials extends AccessCredentialsObject {
 
     private User userLoggedIn;
 
-    private FullAccessCredentials(){
+    public FullAccessCredentials(){
         super();
     }
 
@@ -31,6 +31,26 @@ public class FullAccessCredentials extends AccessCredentialsObject {
         return FullAccessCredentials.newInstance(null);
     }
 
+
+    @Override
+    public double getAccountBalance(Account account) {
+        return super.getAccountBalance(account);
+    }
+
+    @Override
+    public Account getByAccountNumber(String accountNumber) {
+        return super.getByAccountNumber(accountNumber);
+    }
+
+    @Override
+    public boolean insertNewCredit(Credit credit) {
+        return super.insertNewCredit(credit);
+    }
+
+    @Override
+    public Credit getCreditById(int id) {
+        return super.getCreditById(id);
+    }
 
     @Override
     public List<Account> getUserAccounts(User user){

@@ -5,16 +5,16 @@ import org.project.beans.Account;
 import org.project.beans.User;
 import org.project.beans.activities.*;
 import org.project.dataaccess.credentials.EmployeeAccessCredentials;
-import org.project.dataaccess.credentials.UserAccessCredentials;
+import org.project.dataaccess.credentials.CustomerAccessCredentials;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class FileConnection implements Connection{
+class FileBankConnection implements BankConnection {
 
-    private final Logger errorLog = Logger.getLogger(FileConnection.class);
+    private final Logger errorLog = Logger.getLogger(FileBankConnection.class);
 
     final String DIR = "files/";
     final String USERFILE = DIR+"users.csv";
@@ -25,12 +25,12 @@ class FileConnection implements Connection{
     private  List<Account> accountRecord;
     private  List<Activity> activityRecord;
 
-    private static FileConnection singleton = new FileConnection();
+    private static final FileBankConnection singleton = new FileBankConnection();
 
-    private FileConnection(){}
+    private FileBankConnection(){}
 
-    static FileConnection getInstance() {
-        return FileConnection.singleton;
+    static FileBankConnection getInstance() {
+        return FileBankConnection.singleton;
     }
 
 
@@ -48,7 +48,7 @@ class FileConnection implements Connection{
                         }
                     }else{
                         try {
-                            return UserAccessCredentials.newInstance(user);
+                            return CustomerAccessCredentials.newInstance(user);
                         }catch(AccessCredentialsObject.AccessError e){
                             e.printStackTrace();
                         }

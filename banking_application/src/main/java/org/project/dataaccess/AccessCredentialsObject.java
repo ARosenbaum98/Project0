@@ -4,22 +4,27 @@ import org.project.beans.Account;
 import org.project.beans.Credit;
 import org.project.beans.User;
 import org.project.beans.activities.Activity;
+import org.project.beans.activities.Deposit;
+import org.project.beans.activities.Transfer;
+import org.project.beans.activities.Withdrawal;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public abstract class AccessCredentialsObject {
 
-    protected static AccessCredentialsObject singleton;
-    protected static Connection db_connect;
+    private static final DecimalFormat dollarFormat = new DecimalFormat("#.##");
 
-    protected AccessCredentialsObject() {
-    }
+    protected static AccessCredentialsObject singleton;
+    protected static BankConnection db_connect;
+
+    protected AccessCredentialsObject() {}
 
     public User getUser(){
         return null;
     }
 
-    public static void connectToDatabase(Connection db) throws AccessError {
+    public static void connectToDatabase(BankConnection db) throws AccessError {
         if(db_connect==null){
             db_connect = db;
         }else{
@@ -43,12 +48,37 @@ public abstract class AccessCredentialsObject {
     }
 
     /**
-     * @param account
+     * @param account Account
      * @return returns list of activities for an account
      * */
     protected List<Activity> getAccountActivity(Account account) {
         List<Activity> activities = db_connect.getAccountActivity(account);
         return activities;
+    }
+
+    /**
+     * @param account Account
+     * @return returns current balance of account
+     */
+    protected double getAccountBalance(Account account){
+        List<Activity> activities = db_connect.getAccountActivity(account);
+        double count = 0;
+        for(Activity activity : activities){
+            if(activity instanceof Deposit){
+                count += activity.getAmount();
+            }
+            else if(activity instanceof Withdrawal){
+                count -= activity.getAmount();
+            }
+            else if(activity instanceof Transfer){
+                if(activity.getFromAccountId()==account.getAccountId()){
+                    count -= activity.getAmount();
+                }else{
+                    count += activity.getAmount();
+                }
+            }
+        }
+        return Double.parseDouble(dollarFormat.format(count));
     }
 
     /**
@@ -74,14 +104,6 @@ public abstract class AccessCredentialsObject {
     }
 
     /**
-     * @param user User object of user to look up
-     * @return returns list of credit applications for a user
-     * */
-    protected List<Credit> getUserCredit(User user) {
-        return null;
-    }
-
-    /**
      * @param username String - username to look up in system
      * @return Returns User object if they exist in the database. Returns null if they do not
      */
@@ -98,12 +120,21 @@ public abstract class AccessCredentialsObject {
     }
 
     /**
+     * @param accountNumber int - account number
+     * @return returns Account object if it exists. Returns null if it does not
+     */
+    protected Account getByAccountNumber(String accountNumber) {
+        return db_connect.getByAccountNumber(accountNumber);
+    }
+    /**
      * @param id int - account id
      * @return returns Account object if it exists. Returns null if it does not
      */
     protected Account getAccountById(int id) {
         return db_connect.getAccountById(id);
     }
+
+
     /**
      * @param id int - account id
      * @return returns Activity object if it exists. Returns null if it does not
@@ -137,13 +168,36 @@ public abstract class AccessCredentialsObject {
 
 
     /**
-     //* @param  credit
+        @param  credit
      * @return returns true on successful insertion to the DB
-     * *//*
+     * */
     protected boolean insertNewCredit(Credit credit) {
-        return false;
-    }*/
+        return db_connect.insertNewCredit(credit);
+    }
 
+    /**
+     * @param id int - The database ID of the credit objecct
+     * @return returns Credit object
+     */
+    protected Credit getCreditById(int id){
+        return db_connect.getCreditById(id);
+    }
+
+    /**
+     * @param user User object of user to look up
+     * @return returns list of credit applications for a user
+     * */
+    protected List<Credit> getUserCredit(User user){
+        return db_connect.getUserCredit(user);
+    }
+
+    /**
+     * @param credit Credit - credit object to approve/deny
+     * @param approve boolean - whether to approve the credit line
+     */
+    protected void approveCredit(Credit credit, boolean approve) {
+        db_connect.approveCredit(credit, approve);
+    }
 
 
     @Override

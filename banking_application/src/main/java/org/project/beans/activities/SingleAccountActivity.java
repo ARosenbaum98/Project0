@@ -2,6 +2,7 @@ package org.project.beans.activities;
 
 import org.apache.log4j.Logger;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -11,6 +12,8 @@ public abstract class SingleAccountActivity implements Activity{
     int fromAccountId;
     int toAccountId;
     double amount;
+
+    private static final DecimalFormat dollarFormat = new DecimalFormat("#.##");
 
     private static final Logger errorLog = Logger.getLogger(Deposit.class);
 
@@ -55,10 +58,9 @@ public abstract class SingleAccountActivity implements Activity{
         return this.toAccountId;
     }
 
-
     @Override
     public double getAmount() {
-        return this.amount;
+        return Double.parseDouble(dollarFormat.format(amount));
     }
 
     @Override

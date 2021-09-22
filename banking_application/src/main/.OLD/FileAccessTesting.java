@@ -5,8 +5,6 @@ import org.junit.*;
 import org.project.beans.activities.*;
 import org.project.dataaccess.AccessCredentialsObject;
 import org.project.dataaccess.credentials.EmployeeAccessCredentials;
-import org.project.dataaccess.credentials.FullAccessCredentials;
-import org.project.dataaccess.FileLogin;
 import org.project.beans.Account;
 import org.project.beans.User;
 
