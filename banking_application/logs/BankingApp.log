@@ -53,3 +53,45 @@ INFO	2021-09-22 10:51:22,805	4447	org.project.dataaccess.BankConnection	[main]	E
 INFO	2021-09-22 10:51:23,688	5330	org.project.dataaccess.BankConnection	[main]	New user inserted (Id: 6 Account Number: 35465678)
 INFO	2021-09-22 10:51:24,601	6243	org.project.dataaccess.BankConnection	[main]	New user inserted (Id: -1 Username: JJoijsojs)
 INFO	2021-09-22 10:51:25,901	7543	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)
+INFO	2021-09-22 10:59:31,128	0	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 10:59:31,603	475	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 10:59:32,057	929	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 10:59:32,588	1460	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 10:59:33,045	1917	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 10:59:33,484	2356	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 10:59:34,761	3633	org.project.dataaccess.BankConnection	[main]	Customer Login: JJameson22
+INFO	2021-09-22 10:59:35,189	4061	org.project.dataaccess.BankConnection	[main]	Employee Login: ARose
+INFO	2021-09-22 10:59:36,139	5011	org.project.dataaccess.BankConnection	[main]	New user inserted (Id: 6 Account Number: 35465678)
+INFO	2021-09-22 10:59:37,898	6770	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)
+INFO	2021-09-22 11:06:40,273	0	org.project.dataaccess.BankConnection	[main]	Customer Login: JJameson22
+INFO	2021-09-22 11:06:40,713	440	org.project.dataaccess.BankConnection	[main]	Employee Login: ARose
+INFO	2021-09-22 11:06:41,573	1300	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)
+INFO	2021-09-22 11:53:30,032	0	org.project.dataaccess.BankConnection	[main]	Customer Login: JJameson22
+INFO	2021-09-22 11:53:30,610	578	org.project.dataaccess.BankConnection	[main]	Employee Login: ARose
+INFO	2021-09-22 11:53:31,468	1436	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)
+INFO	2021-09-22 11:54:11,096	0	org.project.dataaccess.BankConnection	[main]	Customer Login: JJameson22
+INFO	2021-09-22 11:54:11,547	451	org.project.dataaccess.BankConnection	[main]	Employee Login: ARose
+INFO	2021-09-22 11:54:12,608	1512	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)
+INFO	2021-09-22 11:54:30,453	0	org.project.dataaccess.BankConnection	[main]	Customer Login: JJameson22
+INFO	2021-09-22 11:54:30,919	466	org.project.dataaccess.BankConnection	[main]	Employee Login: ARose
+INFO	2021-09-22 11:54:31,763	1310	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)
+INFO	2021-09-22 11:55:19,720	0	org.project.dataaccess.BankConnection	[main]	Customer Login: JJameson22
+INFO	2021-09-22 11:55:20,332	612	org.project.dataaccess.BankConnection	[main]	Employee Login: ARose
+INFO	2021-09-22 11:55:21,246	1526	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)
+INFO	2021-09-22 11:57:49,811	0	org.project.dataaccess.BankConnection	[main]	Customer Login: JJameson22
+INFO	2021-09-22 11:57:50,310	499	org.project.dataaccess.BankConnection	[main]	Employee Login: ARose
+INFO	2021-09-22 11:57:51,184	1373	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)
+INFO	2021-09-22 11:59:47,659	0	org.project.dataaccess.BankConnection	[main]	Customer Login: JJameson22
+INFO	2021-09-22 11:59:48,120	461	org.project.dataaccess.BankConnection	[main]	Employee Login: ARose
+INFO	2021-09-22 11:59:49,459	1800	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)
+INFO	2021-09-22 12:00:12,092	0	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 12:00:12,535	443	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 12:00:12,983	891	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 12:00:13,427	1335	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 12:00:13,902	1810	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 12:00:14,327	2235	org.project.dataaccess.BankConnection	[main]	New activity inserted (Id: -1)
+INFO	2021-09-22 12:00:15,646	3554	org.project.dataaccess.BankConnection	[main]	Customer Login: JJameson22
+INFO	2021-09-22 12:00:16,080	3988	org.project.dataaccess.BankConnection	[main]	Employee Login: ARose
+INFO	2021-09-22 12:00:17,064	4972	org.project.dataaccess.BankConnection	[main]	New user inserted (Id: 6 Account Number: 43534233)
+INFO	2021-09-22 12:00:18,013	5921	org.project.dataaccess.BankConnection	[main]	New user inserted (Id: -1 Username: FakeUser)
+INFO	2021-09-22 12:00:19,532	7440	org.project.dataaccess.BankConnection	[main]	New credit request inserted (Id: -1 Auto-Approved: true)

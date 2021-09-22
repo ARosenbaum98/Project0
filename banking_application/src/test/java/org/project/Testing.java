@@ -88,7 +88,7 @@ public class Testing {
     @Test
     public void testInsertUser(){
 
-        User user = new User(-1,"JJoijsojs","password123","Jamie", "Joesph", false);
+        User user = new User(-1,"FakeUser","password123","Fakey", "User", false);
         fullAccess.insertNewUser(user);
 
         Assert.assertNotNull(fullAccess.getUserByUsername("JJoijsojs"));
@@ -98,7 +98,7 @@ public class Testing {
     public void testInsertAccount(){
 
         User user = fullAccess.getUserByUsername("AMBobby");
-        Account account = new Account(-1,user.getUserId(),"35465678","Checking");
+        Account account = new Account(-1,user.getUserId(),"43534233","Checking");
 
         fullAccess.insertNewAccount(account);
 
