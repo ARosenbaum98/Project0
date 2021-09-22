@@ -572,51 +572,50 @@ public class App
                         pendingcredits.add(credit);
                     }
                 }
+                l2: while(true){
+                    Credit creditToApprove = null;
+                    while(true){
 
-                Credit creditToApprove;
-                while(true){
+                        if(pendingcredits.size()==0) {
+                            System.out.println("This user has no pending credit approvals");
+                            pauseForUser();
+                            break l2;
+                        }else{
+                            int i = 1;
+                            for(Credit credit : pendingcredits){
+                                System.out.println(i+")   amount: "+credit.getLoanAmount()+" || interest: %"+credit.getInterestRate()*100);
+                                i++;
+                            }
+                        }
+                        printEmptyLine();
+                        System.out.println("Type in a number to approve/deny a request:");
+                        getUserInput();
+                        if(exit||logging_out||go_back) break l1;
 
-                    if(pendingcredits.size()==0) {
-                        System.out.println("This user has no pending credit approvals");
-                        pauseForUser();
-                    }else{
-                        int i = 1;
-                        for(Credit credit : pendingcredits){
-                            System.out.println(i+":   amount: "+credit.getLoanAmount()+" || interest: %"+credit.getInterestRate()*100);
-                            i++;
+                        try{
+                            int index = Integer.parseInt(userInput)-1;
+                            creditToApprove = pendingcredits.get(index);
+                            break;
+
+                        }catch(NumberFormatException | IndexOutOfBoundsException e){
+                            System.out.println("Could not understand that input. Please try again");
+                            pauseForUser();
+                            break l2;
                         }
                     }
-                    printEmptyLine();
-                    System.out.println("Type in a number to approve/deny a request:");
-                    getUserInput();
-                    if(exit||logging_out||go_back) break l1;
 
-                    try{
-                        int index = Integer.parseInt(userInput)-1;
-                        creditToApprove = pendingcredits.get(index);
-                        break;
-
-                    }catch(NumberFormatException | IndexOutOfBoundsException e){
-                        System.out.println("Could not understand that input. Please try again");
-                        pauseForUser();
-                    }
-                }
-
-                System.out.println("Would you like to approve this credit line?");
-                System.out.println("Type 'y' to approve, 'n' to deny, or 'back' to go back");
-                boolean approve = getUserYesOrNo();
-                if(exit||logging_out||go_back) break;
+                    System.out.println("Would you like to approve this credit line?");
+                    System.out.println("Type 'y' to approve, 'n' to deny, or 'back' to go back");
+                    boolean approve = getUserYesOrNo();
+                    if(exit||logging_out||go_back) break;
 
 
-            ((EmployeeAccessCredentials)db_access).approveCredit(creditToApprove, approve);
-            System.out.println("Update Successful.");
-            pauseForUser();
-            break;
-
-
+                    ((EmployeeAccessCredentials)db_access).approveCredit(creditToApprove, approve);
+                    System.out.println("Update Successful.");
+                    pauseForUser();
+                    break;
             }
-
-
+        }
     }
 
     public static void printCreateAccountMenu(){

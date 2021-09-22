@@ -41,13 +41,12 @@ public class Credit {
     }
 
     public double getLoanAmount() {
-
-        final DecimalFormat dollarFormat = new DecimalFormat("#.##");
+        DecimalFormat dollarFormat = new DecimalFormat("#.##");
         return Double.parseDouble(dollarFormat.format(loanAmount));
     }
 
     public double getInterestRate() {
-        final DecimalFormat percentFormat = new DecimalFormat("#.######");
+        DecimalFormat percentFormat = new DecimalFormat("#.######");
         return Double.parseDouble(percentFormat.format(interestRate));
     }
 
