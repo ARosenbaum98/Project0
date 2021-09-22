@@ -216,7 +216,6 @@ public class App
         }
     }
 
-
     /**
      * @param amount Double - Amount requested
      * @return Returns an approval level:
@@ -547,7 +546,18 @@ public class App
     }
 
     public static void printCreateUser(){
+        System.out.print("Username: ");
+        String username = in.nextLine();
+        System.out.print("Password: ");
+        String password = in.nextLine();
+        System.out.print("First Name: ");
+        String fname = in.nextLine();
+        System.out.print("Last Name: ");
+        String lname = in.nextLine();
 
+        User user = new User(-1, username, password, fname, lname, false);
+        ((EmployeeAccessCredentials) db_access).insertNewUser(user);
+        pauseForUser();
     }
 
     public static void printApproveCreditMenu(){
@@ -743,7 +753,6 @@ public class App
     private static void printEmptyLine() {
         System.out.println();
     }
-
 
     private static boolean getUserYesOrNo(){
         userInput = "";
